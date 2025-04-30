@@ -1,0 +1,13 @@
+<p>body works!</p>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="searchText"  class="form-control" placeholder="Search by Restaurant Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" (click)="onSearch()" type="button">Button</button>
+    </div>
+  </div>
+<div class="row">
+    <div class="col-md-3" *ngFor="let restaurant of filteredRestaurants;">
+        <app-card [restaurant]=restaurant>
+        </app-card>
+    </div>
+</div>
