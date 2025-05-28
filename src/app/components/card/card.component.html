@@ -1,10 +1,18 @@
-<div class="card p-3 m-5" style="width: 18rem;">
-    <img src={{imageUrl}} class="card-img-top card-image" alt="...">
-    <div class="card-body">
-      <p class="card-text">{{name}}</p>
-      <p class="card-text">{{avgRating}}</p>
-      <p class="card-text">{{sla}}</p>
-      <p class="card-text">{{cuisines}}</p>
-      
+<div class="card p-3 m-5"  style="width: 18rem;">
+    <img src={{imageUrl}} (click)="onCardClick()" class="card-img-top card-image" alt="...">
+
+
+    <div class="card-body  position-relative">
+        <p class="card-text">{{name}}</p>
+        <p class="card-text">{{avgRating}}</p>
+        <p class="card-text">{{sla}}</p>
+        <p class="card-text">{{cuisines}}</p>
+        <div class="fav_icon" (click)="onFavClicked()">
+
+            <img *ngIf="!isFavourite" src="fav_unselect.png">
+            <img *ngIf="isFavourite" src="fav_select.jpg">
+
+        </div>
     </div>
-  </div>
+
+</div>

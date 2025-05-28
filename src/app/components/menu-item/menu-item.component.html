@@ -1,0 +1,31 @@
+<div class="item-body">
+        <div style="display: flex; 
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 300px;
+                    height: 180px;">
+            <div class="item-image">
+                <img
+                    [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/'+menuItem.card.info.imageId">
+            </div>
+            <div *ngIf="quantity==0" class="add-text" (click)="addButton()" >
+                ADD
+            </div>
+                
+            <div *ngIf="quantity > 0" class="add-remove-btn">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuYdCsSrwG6vlCa4hubZcXujChebpg3wcHlw&s"
+                    (click)="addButton()">
+                    {{quantity}}
+                <img
+                    src="https://www.shutterstock.com/image-illustration/remove-grainy-textured-icon-overlay-260nw-518742685.jpg"
+                    (click)="removeButton()">
+            </div>
+        </div>
+        <div class="item-name">
+            {{menuItem.card.info.name}}
+        </div>
+        <div class="item-desc">
+            {{menuItem.card.info.description}}
+        </div>
+        <hr>
+</div>

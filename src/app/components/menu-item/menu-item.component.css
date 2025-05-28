@@ -1,0 +1,57 @@
+.item-body {
+    width: 800px;
+    margin-left: 80px;
+}
+
+.item-image img {
+    width: 170px;
+}
+
+.add-text{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-style: groove;
+    align-items: center;
+    color: rgb(35, 167, 23);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+
+.add-remove-btn{
+   width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-style: groove;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.add-remove-btn img{
+
+    width: 20px;
+  /* width: 15px; */
+    cursor: pointer;
+    padding: 5px 5px 5px 2px;
+    width: 25px;
+    cursor: pointer;
+    padding: 6px 4px;
+    height: 34px;
+
+}
+
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-desc {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 0 0;
+}

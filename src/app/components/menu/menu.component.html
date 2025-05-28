@@ -1,0 +1,23 @@
+<p>menu works!</p>
+<div *ngFor="let menuCard of menuCards">
+    <ng-container *ngIf="menuCard.card.card.itemCards">
+        <b>{{menuCard.card.card.title}}</b>
+        <ng-container *ngFor="let item of menuCard.card.card.itemCards">
+            <app-menu-item [menuItem]="item">
+
+            </app-menu-item>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="menuCard.card.card.categories">
+
+        <div *ngFor="let category of menuCard.card.card.categories">
+            <ng-container *ngFor="let item of category.itemCards">
+                <app-menu-item [menuItem]="item">
+                </app-menu-item>
+            </ng-container>
+        </div>
+    </ng-container>
+
+
+</div>

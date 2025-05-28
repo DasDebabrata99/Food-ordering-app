@@ -7,7 +7,7 @@
   </div>
 <div class="row">
     <div class="col-md-3" *ngFor="let restaurant of filteredRestaurants;">
-        <app-card [restaurant]=restaurant>
+        <app-card [restaurant]=restaurant  (setFavourite)="onSetFavourite($event)">
         </app-card>
     </div>
 </div>
