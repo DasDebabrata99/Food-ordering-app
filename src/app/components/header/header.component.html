@@ -1,18 +1,46 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <img src={{logo_image}} style="height: 66px">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">about</a>
-          <a class="nav-link" href="#">Contact Us</a>
-
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src={{logo_image}} style="height: 66px">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">about</a>
+        <a class="nav-link" href="#">Contact Us</a>
+        <div class="cart">
+          <img src="cart_icon.png" alt="" srcset="">
+          <div class="cart_text">
+            <a routerLink='cart'> Cart</a>
+          </div>
         </div>
-        Favourite Restaurant : {{favouriteRestaurant}}
+      </div>
+      Favourite Restaurant : {{favouriteRestaurant}}
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet> -->
+<div class="header">
+  <img src={{logo_image}} style="height: 66px">
+
+  <div class="nav_items">
+    <div class="item"> <a routerLink=''>Home</a> </div>
+    <div class="item"> <a routerLink=''>About</a> </div>
+    <div class="item"> <a routerLink=''>Contact Us</a> </div>
+   
+    
+    <div class="cart">
+      <img src="cart_icon.png" alt="" srcset="">
+      <div class="cart_text">
+        <a routerLink='cart'> Cart</a>
       </div>
     </div>
-  </nav>
-  <router-outlet></router-outlet>
+
+    Favourite Restaurant : {{favouriteRestaurant}}
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

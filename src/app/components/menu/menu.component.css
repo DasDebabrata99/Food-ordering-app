@@ -1,0 +1,79 @@
+.menu_body{
+    width: 800px;
+    margin: 40px auto;
+}
+
+.rest_info_wrapper{
+   
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(#f6f6f6, #e2e3e5, #dbdbde);
+    padding: 0 16px 16px 16px;
+}
+
+.rest_header{
+    font-size: 2em;
+    font-family: Gilroy, arial, Helvetica Neue, sans-serif;
+    font-weight: bold;
+    margin: 19px 0;    
+}
+
+.restaurant_info{
+    background: #ffffff;
+    font-family: Gilroy, arial, Helvetica Neue, sans-serif;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 16px 0px;
+    border-style: 1px solid rgba(2, 6, 12, 0.15);
+}
+
+.rest_rating{
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.4px;
+    color: rgba(2, 6, 12, 0.92);
+}
+
+.rest_cuisines{
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.35px;
+    color: rgb(255, 82, 0);
+    text-decoration: underline;
+}
+
+.area_wrapper{
+    margin: 10px 0;
+}
+
+.rest_areaname{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.35px;
+}
+
+.rest_eta{
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.35px;
+}
+
+.strip{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 16px;
+    background-color: rgba(2, 6, 12, 0.05);
+}
+.category_title{
+    font-weight: 800;
+    font-size:18px;
+    font-family: Gilroy;
+    margin-left:  20px;
+}

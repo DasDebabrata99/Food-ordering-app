@@ -24,6 +24,7 @@ export class MenuItemComponent  {
     this.quantity+=1;
     const item: CartItem = {
       id : this.menuItem.card.info.id,
+      itemImage : this.menuItem.card.info.imageId,
       itemName : this.menuItem.card.info.name,
       itemPrice :  this.menuItem.card.info.price,
       quantity : 1,

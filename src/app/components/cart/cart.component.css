@@ -1,0 +1,37 @@
+.content{
+    display: flex;
+    gap:20px;
+    background-color: rgba(237, 237, 237, 0.893);
+      height: 100vh;           /* Full height of the viewport */
+   
+}
+
+.cart-item-container{
+    background-color: white;
+    flex:70%;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-right: 10px;
+    height: 100px
+}
+.account-heading{
+    color: black;
+    font-weight: 20px;
+    font-weight: 650;
+    size: 89px;
+    font-size: 17px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.account-text{
+    color: black;
+    font-weight: 5px;
+    size: 15px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.order{
+    background-color: white;
+    flex:30%;
+}

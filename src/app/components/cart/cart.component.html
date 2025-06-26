@@ -1,1 +1,29 @@
-<p>cart works!</p>
+<div class="content">
+
+    <div class="cart-item-container">
+        <div class="cart-item-heading">
+            Cart
+        </div>
+        <div class="cart-item-text">
+            Below items added to your cart.
+        </div>
+        <div class="cart-item" *ngFor="let item of cartItems">
+            <div class="item-image">
+                <img
+                    [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/'+item.itemImage">
+            </div>
+            <div class="item-name">
+                {{item.itemName}}
+            </div>
+            <div class="item-quantity">
+                {{item.quantity}}
+            </div>
+            <div class="item-price">
+                {{item.itemPrice}}
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

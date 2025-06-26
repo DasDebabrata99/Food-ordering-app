@@ -26,11 +26,7 @@ export class FetchService {
     return this.http.get(menuApiUrl)
       .pipe(
         map((data:any)=>{
-          return data.data.cards
-            .filter((each:any)=>{
-          
-              return each.groupedCard;
-            })[0].groupedCard.cardGroupMap?.REGULAR.cards;
+          return data.data.cards;            
         }),
       )
   }

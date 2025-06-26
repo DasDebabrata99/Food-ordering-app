@@ -28,6 +28,7 @@ import { MenuItemComponent } from '../menu-item/menu-item.component';
 export class MenuComponent implements OnInit{
   restaurantId!: any;
   menuCards:any;
+  restaurantInfo: any;
 
   constructor(private router: ActivatedRoute, private fetchService: FetchService){}
   ngOnInit(): void {
@@ -37,9 +38,14 @@ export class MenuComponent implements OnInit{
 
 
     this.fetchService.fetchMenuData(this.restaurantId)
-      .subscribe((menuCards:any)=>{
-        this.menuCards = menuCards;
+      .subscribe((data:any)=>{
+        this.menuCards = data.filter((each:any)=>{
+          
+              return each.groupedCard;
+            })[0].groupedCard.cardGroupMap?.REGULAR.cards;
 
+        this.restaurantInfo = data[2].card.card.info;
+        console.log("restaurnat info"+this.restaurantInfo);
       });
     
   }

@@ -1,23 +1,59 @@
-<p>menu works!</p>
-<div *ngFor="let menuCard of menuCards">
-    <ng-container *ngIf="menuCard.card.card.itemCards">
-        <b>{{menuCard.card.card.title}}</b>
-        <ng-container *ngFor="let item of menuCard.card.card.itemCards">
-            <app-menu-item [menuItem]="item">
+<div class="menu_body">
+    <div class="rest_header">
+        {{restaurantInfo.name}}
+    </div>
 
-            </app-menu-item>
-        </ng-container>
-    </ng-container>
+   
 
-    <ng-container *ngIf="menuCard.card.card.categories">
+    <div class="rest_info_wrapper">
+        <div class="restaurant_info">
+            <div class="rest_rating">{{restaurantInfo?.avgRating}}
+                ({{restaurantInfo?.totalRatingsString}})
+                {{restaurantInfo?.costForTwoMessage}}
+            </div>
+            <div class="rest_cuisines">
+                {{restaurantInfo?.cuisines}}
+            </div>
+            <div class="details-wrapper">
+                <div class="dot">       </div>
+                <div class="dash">      </div>
+                <div class="dot"></div>
 
-        <div *ngFor="let category of menuCard.card.card.categories">
-            <ng-container *ngFor="let item of category.itemCards">
+            </div>
+            <div class="area_wrapper">
+                <div class="rest_areaname">
+                    Outlet {{restaurantInfo.areaName}}
+                </div>
+                <div class="rest_eta">
+                    {{restaurantInfo.sla.slaString}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="strip"></div>
+    <div *ngFor="let menuCard of menuCards">
+
+
+        <ng-container *ngIf="menuCard.card.card.itemCards">
+            <div class="category_title">{{menuCard.card.card.title}}</div>
+            <ng-container *ngFor="let item of menuCard.card.card.itemCards">
                 <app-menu-item [menuItem]="item">
+
                 </app-menu-item>
             </ng-container>
-        </div>
-    </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="menuCard.card.card.categories">
+
+            <div *ngFor="let category of menuCard.card.card.categories">
+                <ng-container *ngFor="let item of category.itemCards">
+                    <app-menu-item [menuItem]="item">
+                    </app-menu-item>
+                </ng-container>
+            </div>
+        </ng-container>
 
 
+    </div>
 </div>
